@@ -8,23 +8,29 @@
 </head>
 <body>
 <br>
+<a href="{% url "math" %}" class="btn btn-info" role="button">New Equation</a>
+
+
 <br>
 <div class="container">
-
+    <h1 class="text-center">
+        Welcome to Zach's Django Calculator!
+    </h1>
     <div class="panel panel-success">
-      <div class="panel-heading">Calculation Result</div>
-      <div class="panel-body">{{ calculation }}</div>
+        <div class="panel-heading">Calculation Result</div>
+        <div class="panel-body">{{ calculation }}</div>
+        <div class="panel-body">{{ equation }}</div>
+
     </div>
     <form action="">
-        <div class="input-group">
-          <span class="input-group-addon" id="basic-addon1">First Number</span>
-          <input type="number" class="form-control" name="first_num" aria-describedby="basic-addon1">
-        </div>
-        <br>
-        <div class="input-group">
-          <span class="input-group-addon" id="basic-addon1">Second Number</span>
-          <input type="number" class="form-control" name="second_num" aria-describedby="basic-addon2">
-        </div>
+        <grid>
+            <div class="input-group col-xs-12">
+              <span class="input-group-addon" id="basic-addon1">First Number</span>
+              <input type="text" class="form-control" name="first_num" value={{ calculation }} aria-describedby="basic-addon1">
+              <span class="input-group-addon" id="basic-addon2">Second Number</span>
+              <input type="text" class="form-control" name="second_num" aria-describedby="basic-addon2">
+            </div>
+        </grid>
         <br>
         <select name="operator">
           <option value="Add">Add</option>

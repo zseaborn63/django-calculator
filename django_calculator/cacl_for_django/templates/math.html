@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}">
+</head>
+<body>
+<br>
+<br>
+<div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">Calculation Result</div>
+      <div class="panel-body">Panel Content</div>
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">First Number</span>
+      <input type="text" class="form-control" aria-describedby="basic-addon1">
+    </div>
+    <br>
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">Second Number</span>
+      <input type="text" class="form-control" aria-describedby="basic-addon2">
+    </div>
+    <br>
+    <select>
+      <option value="add">Add</option>
+      <option value="subtract">Subtract</option>
+      <option value="multiply">Multiply</option>
+      <option value="divide">Divide</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" class="btn btn-info" value="Submit Button">
+</div>
+</body>
+</html>

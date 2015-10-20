@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from cacl_for_django.views import math_view
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', math_view)
 ]
